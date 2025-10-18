@@ -1,146 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rakion - Game Development Process</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/nav.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakion - Game Development Process</title>
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Navbar will be loaded here -->
-    <div id="navbar-container"></div>
+  <!-- Navbar cargada dinámicamente -->
+  <div id="navbar-container"></div>
 
-    <main>
-        <!-- 1. PLANNING -->
-        <section id="planning">
-            <h2 id="planning-title">1. Planning</h2>
-            <img src="images/inicio.jpeg" alt="Rakion Planning Phase" class="section-image">
-            <p id="planning-text">
-                Rakion was conceived as a fast-paced, 3D action multiplayer game focused on real-time combat, character diversity, and strategic map control. Developed by <strong>Softnyx</strong>, the game aimed to deliver an accessible yet competitive experience for players worldwide.
-            </p>
-            <ul>
-                <li id="genre"><strong>Genre:</strong> Action / Strategy / Multiplayer Online</li>
-                <li id="vision"><strong>Core Vision:</strong> Combine arcade-style combat with RPG-like character progression</li>
-                <li id="audience"><strong>Target Audience:</strong> Teens and young adults interested in competitive PvP</li>
-                <li id="platform"><strong>Platform:</strong> Windows PC (DirectX 9.0+ required)</li>
-                <li id="release"><strong>Initial Release:</strong> Early 2000s (South Korea)</li>
-            </ul>
-        </section>
+  <main>
+    <!-- TIMELINE -->
+    <div class="timeline">
+      <div class="step" data-target="#planning">1. Planning</div>
+      <div class="step" data-target="#pre-production">2. Pre-production</div>
+      <div class="step" data-target="#production">3. Production</div>
+      <div class="step" data-target="#testing">4. Testing</div>
+    </div>
 
-        <!-- 2. PRE-PRODUCTION -->
-        <section id="pre-production">
-            <h2 id="preprod-title">2. Pre-production</h2>
-            <img src="images/preproduccion.jpg" alt="Rakion Pre-production Art" class="section-image">
-            <p id="preprod-text">
-                During pre-production, the Softnyx team defined the game’s core mechanics, visual style, and technical requirements. They chose a stylized 3D aesthetic to ensure performance on low-end hardware while maintaining visual clarity.
-            </p>
-            <ul>
-                <li id="preprod-1">Created initial character concepts: <em>Warrior, Mage, Archer, Assassin</em></li>
-                <li id="preprod-2">Designed map layouts focused on balance and tactical depth</li>
-                <li id="preprod-3">Selected DirectX 9.0 as the graphics API for broad compatibility</li>
-                <li id="preprod-4">Planned server architecture for real-time multiplayer synchronization</li>
-                <li id="preprod-5">Decided against complex storylines to prioritize fast-paced gameplay</li>
-            </ul>
-        </section>
+    <!-- 1. PLANNING -->
+    <section id="planning">
+      <h2 id="planning-title">1. Planning</h2>
+      <img src="images/inicio.jpeg" alt="Rakion Planning Phase" class="section-image">
+      <p id="planning-text">
+        Rakion was conceived as a fast-paced, 3D action multiplayer game focused on real-time combat,
+        character diversity, and strategic map control. Developed by <strong>Softnyx</strong>, the game
+        aimed to deliver an accessible yet competitive experience for players worldwide.
+      </p>
+      <ul>
+        <li id="genre"><strong>Genre:</strong> Action / Strategy / Multiplayer Online</li>
+        <li id="vision"><strong>Core Vision:</strong> Combine arcade-style combat with RPG-like progression</li>
+        <li id="audience"><strong>Target Audience:</strong> Teens and young adults interested in PvP</li>
+        <li id="platform"><strong>Platform:</strong> Windows PC (DirectX 9.0+)</li>
+        <li id="release"><strong>Initial Release:</strong> Early 2000s (South Korea)</li>
+      </ul>
+    </section>
 
-        <!-- 3. PRODUCTION -->
-        <section id="production">
-            <h2 id="production-title">3. Production</h2>
-            <img src="images/produccion.jpg" alt="Rakion In-Game Screenshot" class="section-image">
-            <p id="production-text">
-                The production phase involved coding, asset creation, animation, and network implementation. Rakion was built using a custom C++ engine optimized for low-latency multiplayer combat.
-            </p>
-            <div class="card-grid">
-                <div class="card">
-                    <h3 id="engine-title">Engine</h3>
-                    <p id="engine-text">Custom C++ engine with DirectX 9.0 integration</p>
-                </div>
-                <div class="card">
-                    <h3 id="art-title">Art</h3>
-                    <p id="art-text">Low-poly 3D models with hand-painted textures</p>
-                </div>
-                <div class="card">
-                    <h3 id="net-title">Networking</h3>
-                    <p id="net-text">Client-server model with prediction & lag compensation</p>
-                </div>
-                <div class="card">
-                    <h3 id="audio-title">Audio</h3>
-                    <p id="audio-text">Dynamic sound effects and character voice lines</p>
-                </div>
-            </div>
-        </section>
+    <!-- 2. PRE-PRODUCTION -->
+    <section id="pre-production">
+      <h2 id="preprod-title">2. Pre-production</h2>
+      <img src="images/preproduccion.jpg" alt="Rakion Pre-production Art" class="section-image">
+      <p id="preprod-text">
+        During pre-production, the Softnyx team defined the game’s core mechanics, visual style,
+        and technical requirements. They chose a stylized 3D aesthetic to ensure performance
+        on low-end hardware while maintaining visual clarity.
+      </p>
+      <ul>
+        <li id="preprod-1">Character concepts: <em>Warrior, Mage, Archer, Assassin</em></li>
+        <li id="preprod-2">Designed balanced tactical maps</li>
+        <li id="preprod-3">Selected DirectX 9.0 as graphics API</li>
+        <li id="preprod-4">Planned real-time multiplayer architecture</li>
+        <li id="preprod-5">Prioritized gameplay over storytelling</li>
+      </ul>
+    </section>
 
-        <!-- 4. TESTING -->
-        <section id="testing">
-            <h2 id="testing-title">4. Testing</h2>
-            <img src="images/testing.jpeg" alt="Rakion Testing Phase" class="section-image">
-            <p id="testing-text">
-                Rigorous testing ensured stability across a wide range of hardware configurations. Softnyx prioritized performance on minimum-spec systems while optimizing for higher-end setups.
-            </p>
+    <!-- 3. PRODUCTION -->
+    <section id="production">
+      <h2 id="production-title">3. Production</h2>
+      <img src="images/produccion.jpg" alt="Rakion In-Game Screenshot" class="section-image">
+      <p id="production-text">
+        The production phase involved coding, asset creation, animation, and network implementation.
+        Rakion was built using a custom C++ engine optimized for low-latency multiplayer combat.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <h3 id="engine-title">Engine</h3>
+          <p id="engine-text">Custom C++ engine with DirectX 9.0 integration</p>
+        </div>
+        <div class="card">
+          <h3 id="art-title">Art</h3>
+          <p id="art-text">Low-poly 3D models with hand-painted textures</p>
+        </div>
+        <div class="card">
+          <h3 id="net-title">Networking</h3>
+          <p id="net-text">Client-server model with lag compensation</p>
+        </div>
+        <div class="card">
+          <h3 id="audio-title">Audio</h3>
+          <p id="audio-text">Dynamic sound effects and character voices</p>
+        </div>
+      </div>
+    </section>
 
-            <h3 id="sysreq-title" style="text-align: center; margin: 1.5rem 0 1rem; color: #f39c12;">System Requirements</h3>
-            <table class="system-table">
-                <thead>
-                    <tr>
-                        <th id="col-component">Component</th>
-                        <th id="col-min">Minimum</th>
-                        <th id="col-rec">Recommended</th>
-                        <th id="col-opt">Optimal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>OS</td>
-                        <td id="os-min">Windows 98 / ME / 2000 / XP</td>
-                        <td id="os-rec">Windows XP</td>
-                        <td id="os-opt">Windows XP or newer</td>
-                    </tr>
-                    <tr>
-                        <td>CPU</td>
-                        <td id="cpu-min">Pentium III 800 MHz</td>
-                        <td id="cpu-rec">Pentium III 1.4 GHz</td>
-                        <td id="cpu-opt">Pentium IV 2 GHz+</td>
-                    </tr>
-                    <tr>
-                        <td>RAM</td>
-                        <td id="ram-min">256 MB</td>
-                        <td id="ram-rec">256 MB</td>
-                        <td id="ram-opt">512 MB+</td>
-                    </tr>
-                    <tr>
-                        <td>GPU</td>
-                        <td id="gpu-min">GeForce 2 MX / Radeon 9200</td>
-                        <td id="gpu-rec">GeForce 4 MX / FX 5200 / Radeon 9500</td>
-                        <td id="gpu-opt">GeForce 3 Ti / FX 5700+ / Radeon 9600+</td>
-                    </tr>
-                    <tr>
-                        <td>Resolution</td>
-                        <td id="res-min">640×480</td>
-                        <td id="res-rec">800×600</td>
-                        <td id="res-opt">1024×768+</td>
-                    </tr>
-                    <tr>
-                        <td>FPS (avg)</td>
-                        <td id="fps-min">25</td>
-                        <td id="fps-rec">40</td>
-                        <td id="fps-opt">70</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- 4. TESTING -->
+    <section id="testing">
+      <h2 id="testing-title">4. Testing</h2>
+      <img src="images/testing.jpeg" alt="Rakion Testing Phase" class="section-image">
+      <p id="testing-text">
+        Rigorous testing ensured stability across a wide range of hardware configurations.
+        Softnyx prioritized performance on low-end systems while optimizing for higher-end setups.
+      </p>
 
-            <p id="note-text" style="margin-top: 1.2rem;">
-                ⚠️ <strong>Note:</strong> NVIDIA GeForce cards are strongly recommended. Avoid TNT, Intel, Rage, or Matrox GPUs due to compatibility issues.
-            </p>
-        </section>
-    </main>
+      <h3 id="sysreq-title">System Requirements</h3>
+      <table class="system-table">
+        <thead>
+          <tr>
+            <th id="col-component">Component</th>
+            <th id="col-min">Minimum</th>
+            <th id="col-rec">Recommended</th>
+            <th id="col-opt">Optimal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>OS</td><td>Windows 98 / XP</td><td>Windows XP</td><td>XP or newer</td></tr>
+          <tr><td>CPU</td><td>Pentium III 800 MHz</td><td>Pentium III 1.4 GHz</td><td>Pentium IV 2 GHz+</td></tr>
+          <tr><td>RAM</td><td>256 MB</td><td>256 MB</td><td>512 MB+</td></tr>
+          <tr><td>GPU</td><td>GeForce 2 MX</td><td>FX 5200 / Radeon 9500</td><td>GeForce 5700+ / Radeon 9600+</td></tr>
+          <tr><td>Resolution</td><td>640×480</td><td>800×600</td><td>1024×768+</td></tr>
+          <tr><td>FPS</td><td>25</td><td>40</td><td>70</td></tr>
+        </tbody>
+      </table>
 
-    <footer>
-        <p id="footer-text">© 2025 Rakion Development Guide | Educational Project by [Your Name]</p>
-    </footer>
+      <p id="note-text">
+        ⚠️ <strong>Note:</strong> NVIDIA GeForce cards are strongly recommended. Avoid TNT, Intel, Rage, or Matrox GPUs.
+      </p>
+    </section>
+  </main>
 
-    <!-- Scripts -->
-    <script src="js/load-components.js" defer></script>
-    <script src="js/nuevo.js" defer></script>
+  <footer>
+    <p id="footer-text">© 2025 Rakion Development Guide | Educational Project</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/timeline-scroll.js" defer></script>
+
+  <!-- Carga del navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("navbar-container").innerHTML = html;
+          // 🔥 Importante: lanzar evento personalizado
+          document.dispatchEvent(new Event("navbarLoaded"));
+        })
+        .then(() => {
+          document.querySelectorAll(".step").forEach(step => {
+            step.addEventListener("click", () => {
+              const target = document.querySelector(step.dataset.target);
+              if (target) {
+                window.scrollTo({
+                  top: target.offsetTop - 80,
+                  behavior: "smooth"
+                });
+              }
+            });
+          });
+        });
+    });
+  </script>
+
+  <!-- Traductor -->
+  <script src="js/nuevo.js" defer></script>
 </body>
 </html>

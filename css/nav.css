@@ -1,97 +1,80 @@
-/* css/nav.css */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2.5rem;
-    background-color: #ffffff; /* smoke white */
-    color: #585454; /* black text */
+    padding: 0.6rem 2rem;
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo centered, slightly bigger but not too tall */
-.navbar .logo img {
-    height: 80px;
+.logo img {
+    height: 65px;
     width: auto;
-    max-width: 160px;
 }
 
-/* Dropdown menu on the left */
-.dropdown {
-    position: relative;
-    display: inline-block;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 }
 
-.dropbtn {
-    background-color: transparent;
-    color: #000;
-    padding: 10px 16px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
     font-weight: 500;
-    border-radius: 4px;
-    transition: background 0.3s, color 0.3s;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.dropbtn:hover {
-    background-color: #e0e0e0; /* light gray */
+.nav-links a:hover {
+    color: #00a8ff;
 }
 
-/* Dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #d6d6d6; /* medium gray */
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1001;
-    border-radius: 4px;
-    top: 100%;
-    left: 0;
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
-.dropdown-content a {
+.btn-jugar {
+    background-color: #00a8ff;
+    color: #fff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-jugar:hover {
+    background-color: #f1c40f;
     color: #000;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: background 0.2s;
+    transform: translateY(-2px);
 }
 
-.dropdown-content a:hover {
-    background-color: #bfbfbf; /* darker gray */
+/* Botón de idioma */
+.btn-lang {
+    background: transparent;
+    border: 1.5px solid #00a8ff;
+    color: #e0e0e0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.btn-lang:hover {
+    background-color: #00a8ff;
+    color: #000;
 }
 
-/* Play button on the right */
-.nav-right .btn-jugar {
-    background-color: rgb(34, 39, 54);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-.nav-right .btn-jugar:hover {
-    background-color: rgb(199, 214, 144);
-    color: black;
-    text-decoration: none;
-}
-
-/* Prevent content from being hidden under the fixed navbar */
 body {
-    padding-top: 90px; /* Adjusted to fit new logo height */
+    padding-top: 90px;
 }
