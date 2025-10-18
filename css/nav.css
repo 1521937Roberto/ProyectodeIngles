@@ -1,0 +1,97 @@
+/* css/nav.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.5rem;
+    background-color: #ffffff; /* smoke white */
+    color: #585454; /* black text */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Logo centered, slightly bigger but not too tall */
+.navbar .logo img {
+    height: 80px;
+    width: auto;
+    max-width: 160px;
+}
+
+/* Dropdown menu on the left */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 10px 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #e0e0e0; /* light gray */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d6d6d6; /* medium gray */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #bfbfbf; /* darker gray */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Play button on the right */
+.nav-right .btn-jugar {
+    background-color: rgb(34, 39, 54);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nav-right .btn-jugar:hover {
+    background-color: rgb(199, 214, 144);
+    color: black;
+    text-decoration: none;
+}
+
+/* Prevent content from being hidden under the fixed navbar */
+body {
+    padding-top: 90px; /* Adjusted to fit new logo height */
+}

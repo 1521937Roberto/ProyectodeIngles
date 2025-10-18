@@ -1,0 +1,191 @@
+/* css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a2a3a 0%, #0f1c2e 100%);
+    color: #ecf0f1;
+    line-height: 1.6;
+    padding-top: 90px; /* Compensa la navbar fija */
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* === Secciones principales === */
+section {
+    background: rgba(44, 62, 80, 0.65);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e74c3c; /* Rojo Rakion */
+    margin: 0.6rem auto;
+    border-radius: 2px;
+}
+
+/* === Texto === */
+section p {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #d5dbdb;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* === Listas === */
+section ul,
+section ol {
+    margin: 1.2rem 0 1.5rem 1.8rem;
+    padding-left: 0.5rem;
+}
+
+section li {
+    margin-bottom: 0.7rem;
+    color: #bdc3c7;
+    font-size: 1.05rem;
+}
+
+/* === Imágenes dentro de secciones === */
+.section-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.8rem auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Centrar imágenes en móviles */
+@media (max-width: 600px) {
+    .section-image {
+        margin: 1.5rem 0;
+    }
+}
+
+/* === Tarjetas (cards) para Testing, Production, etc. === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.card {
+    background: rgba(30, 45, 60, 0.7);
+    border-radius: 12px;
+    padding: 1.4rem;
+    text-align: center;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background: rgba(35, 52, 70, 0.8);
+    border-color: rgba(231, 76, 60, 0.4);
+}
+
+.card h3 {
+    color: #f1c40f;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* === Tablas (para System Requirements) === */
+.system-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.8rem 0;
+    background: rgba(25, 35, 50, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.system-table th,
+.system-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.system-table th {
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+    font-weight: 600;
+}
+
+.system-table tr:nth-child(even) {
+    background: rgba(40, 55, 75, 0.5);
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 1.8rem;
+    background: rgba(10, 18, 28, 0.9);
+    color: #95a5a6;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    font-size: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    main {
+        padding: 1.3rem;
+    }
+
+    section {
+        padding: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.9rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
