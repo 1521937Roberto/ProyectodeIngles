@@ -10,25 +10,32 @@
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap; /* Permite que el contenido se envuelva si es necesario */
+    min-height: 70px; /* Asegura una altura mínima */
 }
 
 .logo img {
-    height: 65px;
+    height: 60px; /* Ajuste de tamaño del logo */
     width: auto;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduce el espacio entre enlaces */
     list-style: none;
+    margin: 0 1rem; /* Margen lateral */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si no caben */
+    justify-content: center; /* Centra los enlaces si se envuelven */
+    flex-grow: 1; /* Intenta ocupar espacio disponible */
 }
 
 .nav-links a {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Ligeramente más pequeño */
     transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que se rompa la línea en enlaces */
 }
 
 .nav-links a:hover {
@@ -38,18 +45,21 @@
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.6rem; /* Reduce espacio entre botones */
+    flex-shrink: 0; /* No se contrae */
 }
 
 .btn-jugar {
     background-color: #00a8ff;
     color: #fff;
-    padding: 8px 18px;
+    padding: 8px 14px; /* Ajuste de padding */
     border: none;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 0.9rem; /* Ajuste de tamaño de fuente */
+    min-height: 36px; /* Asegura altura mínima para toque */
 }
 
 .btn-jugar:hover {
@@ -63,11 +73,13 @@
     background: transparent;
     border: 1.5px solid #00a8ff;
     color: #e0e0e0;
-    padding: 8px 14px;
+    padding: 8px 12px; /* Ajuste de padding */
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.9rem; /* Ajuste de tamaño de fuente */
+    min-height: 36px; /* Asegura altura mínima para toque */
 }
 
 .btn-lang:hover {
@@ -77,4 +89,106 @@
 
 body {
     padding-top: 90px;
+}
+
+/* Ajuste para móviles medianos */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .nav-links {
+        gap: 1rem; /* Reduce espacio entre enlaces */
+        font-size: 0.9rem; /* Reduce tamaño de fuente */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .nav-right {
+        gap: 0.5rem; /* Reduce espacio entre botones */
+    }
+
+    .btn-jugar, .btn-lang {
+        padding: 7px 11px; /* Ajuste de padding */
+        font-size: 0.85rem; /* Reduce tamaño de fuente */
+    }
+}
+
+/* Ajuste para móviles pequeños */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.4rem 0.8rem;
+        min-height: 65px; /* Ajuste de altura mínima */
+    }
+
+    .logo img {
+        height: 50px; /* Ajuste de tamaño del logo */
+    }
+
+    .nav-links {
+        gap: 0.8rem; /* Reduce espacio entre enlaces */
+        margin: 0 0.5rem; /* Reduce margen lateral */
+        flex-direction: row; /* Mantiene en fila, pero se envuelve */
+        justify-content: center; /* Centra si hay envoltura */
+        flex-wrap: wrap; /* Permite envoltura */
+        order: 1; /* Coloca los enlaces en el medio */
+        width: 100%; /* Ocupa el ancho completo si se envuelve */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Reduce tamaño de fuente */
+        padding: 0.2rem 0.4rem; /* Pequeño padding interno */
+    }
+
+    .logo {
+        order: 0; /* Coloca el logo primero */
+    }
+
+    .nav-right {
+        order: 2; /* Coloca los botones al final */
+        gap: 0.4rem; /* Reduce espacio entre botones */
+        margin-left: auto; /* Empuja a la derecha si hay espacio */
+    }
+
+    .btn-jugar, .btn-lang {
+        padding: 6px 9px; /* Ajuste de padding */
+        font-size: 0.8rem; /* Reduce tamaño de fuente */
+    }
+}
+
+/* Ajuste para dispositivos muy pequeños */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.3rem 0.6rem;
+        min-height: 60px; /* Ajuste de altura mínima */
+    }
+
+    .logo img {
+        height: 45px; /* Ajuste de tamaño del logo */
+    }
+
+    .nav-links {
+        gap: 0.6rem; /* Reduce espacio entre enlaces */
+        margin: 0 0.3rem; /* Reduce margen lateral */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem; /* Reduce tamaño de fuente */
+        padding: 0.1rem 0.3rem; /* Pequeño padding interno */
+    }
+
+    .nav-right {
+        gap: 0.3rem; /* Reduce espacio entre botones */
+    }
+
+    .btn-jugar, .btn-lang {
+        padding: 5px 7px; /* Ajuste de padding */
+        font-size: 0.75rem; /* Reduce tamaño de fuente */
+    }
 }

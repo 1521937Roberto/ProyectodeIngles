@@ -94,24 +94,81 @@
       </p>
 
       <h3 id="sysreq-title">System Requirements</h3>
-      <table class="system-table">
-        <thead>
-          <tr>
-            <th id="col-component">Component</th>
-            <th id="col-min">Minimum</th>
-            <th id="col-rec">Recommended</th>
-            <th id="col-opt">Optimal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>OS</td><td>Windows 98 / XP</td><td>Windows XP</td><td>XP or newer</td></tr>
-          <tr><td>CPU</td><td>Pentium III 800 MHz</td><td>Pentium III 1.4 GHz</td><td>Pentium IV 2 GHz+</td></tr>
-          <tr><td>RAM</td><td>256 MB</td><td>256 MB</td><td>512 MB+</td></tr>
-          <tr><td>GPU</td><td>GeForce 2 MX</td><td>FX 5200 / Radeon 9500</td><td>GeForce 5700+ / Radeon 9600+</td></tr>
-          <tr><td>Resolution</td><td>640×480</td><td>800×600</td><td>1024×768+</td></tr>
-          <tr><td>FPS</td><td>25</td><td>40</td><td>70</td></tr>
-        </tbody>
-      </table>
+
+      <!-- Nueva estructura de requisitos para mejor responsividad -->
+      <div class="system-requirements-grid">
+        <!-- OS -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label" id="col-component">OS</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="os-min">Windows 98 / XP</div>
+            <div class="req-value" id="os-rec">Windows XP</div>
+            <div class="req-value" id="os-opt">XP or newer</div>
+          </div>
+        </div>
+
+        <!-- CPU -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label">CPU</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="cpu-min">Pentium III 800 MHz</div>
+            <div class="req-value" id="cpu-rec">Pentium III 1.4 GHz</div>
+            <div class="req-value" id="cpu-opt">Pentium IV 2 GHz+</div>
+          </div>
+        </div>
+
+        <!-- RAM -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label">RAM</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="ram-min">256 MB</div>
+            <div class="req-value" id="ram-rec">256 MB</div>
+            <div class="req-value" id="ram-opt">512 MB+</div>
+          </div>
+        </div>
+
+        <!-- GPU -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label">GPU</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="gpu-min">GeForce 2 MX</div>
+            <div class="req-value" id="gpu-rec">FX 5200 / Radeon 9500</div>
+            <div class="req-value" id="gpu-opt">GeForce 5700+ / Radeon 9600+</div>
+          </div>
+        </div>
+
+        <!-- Resolution -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label">Resolution</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="res-min">640×480</div>
+            <div class="req-value" id="res-rec">800×600</div>
+            <div class="req-value" id="res-opt">1024×768+</div>
+          </div>
+        </div>
+
+        <!-- FPS -->
+        <div class="req-item">
+          <div class="req-header">
+            <span class="req-label">FPS</span>
+          </div>
+          <div class="req-values">
+            <div class="req-value" id="fps-min">25</div>
+            <div class="req-value" id="fps-rec">40</div>
+            <div class="req-value" id="fps-opt">70</div>
+          </div>
+        </div>
+      </div>
 
       <p id="note-text">
         ⚠️ <strong>Note:</strong> NVIDIA GeForce cards are strongly recommended. Avoid TNT, Intel, Rage, or Matrox GPUs.

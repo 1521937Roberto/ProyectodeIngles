@@ -23,16 +23,19 @@ body {
     border-radius: 12px;
     padding: 1rem 2rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap; /* Permite que los items se envuelvan si es necesario */
 }
 
 .timeline .step {
-    flex: 1;
+    flex: 1; /* Intenta distribuir espacio equitativamente */
     text-align: center;
     background: rgba(44, 62, 80, 0.6);
     padding: 0.8rem;
     border-radius: 8px;
     color: #95a5a6;
     transition: all 0.3s;
+    min-width: 120px; /* Ancho mínimo para evitar que se compriman demasiado */
+    font-size: 1rem; /* Tamaño base */
 }
 
 .timeline .step.active, 
@@ -89,8 +92,7 @@ section h2::after {
 .section-image {
     display: block;
     margin: 25px auto;
-    max-width: 600px;
-    width: 90%;
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -117,7 +119,7 @@ section p {
     font-size: 1rem;
     color: #dcdcdc;
     margin: 1.2rem 0;
-    text-align: justify;
+    text-align: justify; /* Justificado para escritorio */
 }
 
 section ul {
@@ -179,27 +181,72 @@ section ul li::before {
     font-size: 0.95rem;
 }
 
-/* === TABLAS === */
-.system-table {
-    width: 100%;
-    border-collapse: collapse;
+/* === NUEVA ESTRUCTURA DE REQUISITOS DEL SISTEMA === */
+.system-requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
     margin-top: 1.2rem;
-    font-size: 0.95rem;
 }
 
-.system-table th, .system-table td {
-    border: 1px solid rgba(255, 255, 255, 0.15);
+.req-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
     padding: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.req-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.req-header {
+    background: rgba(52, 152, 219, 0.3);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
-.system-table th {
-    background: rgba(52, 152, 219, 0.3);
-    color: #fff;
+.req-label {
+    font-weight: bold;
+    font-size: 0.95rem;
 }
 
-.system-table tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.05);
+.req-values {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.req-value {
+    flex: 1;
+    min-width: 80px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+/* Estilos para la columna "Mínimo" */
+.req-value:nth-child(1) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Estilos para la columna "Recomendado" */
+.req-value:nth-child(2) {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Estilos para la columna "Óptimo" */
+.req-value:nth-child(3) {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 /* === CUADRO DE RESUMEN === */
@@ -235,27 +282,126 @@ footer .footer-links a:hover {
 }
 
 /* === RESPONSIVE === */
+/* Dispositivos medianos */
 @media (max-width: 768px) {
     section {
-        padding: 1.5rem;
-    }
-
-    .section-image {
-        max-width: 95%;
+        padding: 1.8rem 1.5rem; /* Ajuste de padding */
     }
 
     section h2 {
-        font-size: 1.8rem;
+        font-size: 1.9rem; /* Ajuste de tamaño de título */
     }
 
     .card-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr 1fr; /* Dos columnas en móviles medianos */
+        gap: 1.2rem; /* Ajuste de espacio */
+    }
+
+    /* Ajuste de texto */
+    section p {
+        font-size: 1.05rem; /* Ligeramente más grande */
+        text-align: left; /* Alineación izquierda para móviles */
+    }
+
+    /* Ajuste del timeline */
+    .timeline {
+        padding: 0.8rem 1rem;
+        gap: 0.5rem; /* Menos espacio entre pasos */
+    }
+    .timeline .step {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.9rem;
+        min-width: 100px; /* Ancho mínimo reducido */
+        flex: 1 1 auto; /* Flexibilidad */
+    }
+
+    /* Ajuste de la nueva estructura de requisitos */
+    .system-requirements-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles medianos */
+        gap: 0.8rem;
+    }
+
+    .req-values {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .req-value {
+        min-width: auto;
+        width: 100%;
+        font-size: 0.8rem;
     }
 }
 
+/* Dispositivos pequeños */
 @media (max-width: 480px) {
+    section {
+        padding: 1.5rem 1.2rem; /* Ajuste de padding */
+    }
+
+    .section-image {
+        max-width: 100%; /* Asegura que la imagen use el 100% del contenedor */
+    }
+
+    section h2 {
+        font-size: 1.7rem; /* Ajuste de tamaño de título */
+    }
+
     .card-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una columna en móviles pequeños */
+        gap: 1rem; /* Ajuste de espacio */
+    }
+
+    /* Ajuste de texto */
+    section p {
+        font-size: 1rem; /* Ajuste de tamaño de fuente */
+    }
+
+    /* Ajuste del timeline */
+    .timeline {
+        flex-direction: column; /* Apila los pasos verticalmente */
+        gap: 0.4rem; /* Menos espacio entre pasos */
+    }
+    .timeline .step {
+        padding: 0.7rem 0.5rem; /* Ajuste de padding */
+        font-size: 0.95rem; /* Ajuste de tamaño de fuente */
+        min-width: auto; /* Ignora el ancho mínimo */
+        flex: 1 1 100%; /* Ocupa el 100% del ancho */
+    }
+
+    /* Ajuste de la nueva estructura de requisitos */
+    .system-requirements-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+        gap: 0.6rem;
+    }
+
+    .req-header {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .req-value {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+}
+
+/* Dispositivos muy pequeños (Ej: 320px) */
+@media (max-width: 360px) {
+    section {
+        padding: 1.2rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .timeline .step {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.4rem;
+    }
+
+    .req-value {
+        font-size: 0.7rem;
     }
 }
