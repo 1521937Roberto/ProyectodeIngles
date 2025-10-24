@@ -71,10 +71,35 @@ document.addEventListener("navbarLoaded", () => {
       "note-text":
         "⚠️ <strong>Nota:</strong> Se recomienda encarecidamente el uso de tarjetas NVIDIA GeForce. Evite TNT, Intel, Rage o Matrox por problemas de compatibilidad.",
 
+      // === NUEVAS SECCIONES ===
+      "prelaunch-title": "5. Pre-lanzamiento",
+      "prelaunch-text":
+        "Antes de su lanzamiento oficial, Rakion entró en una fase crítica de pre-lanzamiento centrada en preparativos finales y construcción de comunidad. Softnyx coordinó esfuerzos de marketing, distribuyó acceso beta a jugadores seleccionados para pruebas de estrés y aseguró que la infraestructura de servidores estuviera lista para la llegada masiva de jugadores. Esta etapa fue vital para garantizar un lanzamiento exitoso y sin problemas.",
+      "prelaunch-1":
+        "<strong>Pruebas Finales:</strong> Pruebas beta a gran escala para identificar errores de último minuto y cuellos de botella en los servidores.",
+      "prelaunch-2":
+        "<strong>Marketing y Expectativa:</strong> Lanzamiento de tráilers, avances de jugabilidad y participación en foros comunitarios.",
+      "prelaunch-3":
+        "<strong>Infraestructura:</strong> Configuración final de servidores de juego y redes de distribución (CDN).",
+      "prelaunch-4":
+        "<strong>Soporte Listo:</strong> Preparación de canales de soporte al cliente para consultas del día del lanzamiento.",
+
+      "launch-title": "6. Lanzamiento",
+      "launch-text":
+        "El lanzamiento oficial de Rakion marcó su debut ante el público global. Tras la preparación de Softnyx, el juego se hizo disponible para descarga a través de sus canales oficiales. El lanzamiento fue respaldado por parches inmediatos posteriores al lanzamiento para corregir cualquier problema imprevisto, asegurando que los jugadores recibieran una experiencia estable y pulida desde el primer día, en línea con los requisitos del sistema publicados en la web oficial.",
+      "launch-1":
+        "<strong>Lanzamiento Oficial:</strong> Cliente del juego disponible públicamente para descarga desde el portal oficial de Softnyx.",
+      "launch-2":
+        "<strong>Requisitos del Sistema:</strong> Publicación clara de especificaciones mínimas y recomendadas (ej. Win98/XP, Pentium III, 256 MB RAM, GeForce 2 MX+).",
+      "launch-3":
+        "<strong>Soporte del Día Uno:</strong> Implementación rápida de correcciones y actualizaciones de rendimiento basadas en retroalimentación en vivo.",
+      "launch-4":
+        "<strong>Orientación de Hardware:</strong> Recomendaciones oficiales de usar tarjetas GeForce y evitar GPUs incompatibles como TNT, Intel, Rage o Matrox.",
+
+      // === OTROS ===
       "menu-title": "Proceso del Juego",
       "play-btn": "Jugar",
-      "footer-text":
-        "© 2025 Guía de Desarrollo de Rakion | Proyecto Educativo de [Tu Nombre]",
+      "footer-text": "© 2025 Guía de Desarrollo de Rakion | Proyecto Educativo",
       "language-toggle": "English",
     },
     en: {
@@ -140,10 +165,35 @@ document.addEventListener("navbarLoaded", () => {
       "note-text":
         "⚠️ <strong>Note:</strong> NVIDIA GeForce cards are strongly recommended. Avoid TNT, Intel, Rage, or Matrox GPUs due to compatibility issues.",
 
+      // === NUEVAS SECCIONES ===
+      "prelaunch-title": "5. Pre-launch",
+      "prelaunch-text":
+        "Before its official release, Rakion entered a critical pre-launch phase focused on final preparations and community building. Softnyx coordinated marketing efforts, distributed beta access to select players for stress testing, and ensured server infrastructure was ready for the global player influx. This stage was vital to guarantee a smooth and successful launch day.",
+      "prelaunch-1":
+        "<strong>Final Testing:</strong> Large-scale beta tests to identify last-minute bugs and server bottlenecks.",
+      "prelaunch-2":
+        "<strong>Marketing & Hype:</strong> Release of trailers, gameplay previews, and community engagement on forums.",
+      "prelaunch-3":
+        "<strong>Infrastructure:</strong> Final configuration of game servers and download distribution networks (CDN).",
+      "prelaunch-4":
+        "<strong>Support Readiness:</strong> Preparation of customer support channels for launch-day inquiries.",
+
+      "launch-title": "6. Launch",
+      "launch-text":
+        "The official launch of Rakion marked its debut to the global gaming public. Following Softnyx's preparation, the game became available for download through its official channels. The launch was supported by immediate post-release patches to address any unforeseen issues, ensuring players received a stable and polished experience from day one, in line with the system requirements published on the official website.",
+      "launch-1":
+        "<strong>Official Release:</strong> Game client made publicly available for download via the official Softnyx portal.",
+      "launch-2":
+        "<strong>System Requirements:</strong> Clear publication of minimum and recommended specs (e.g., Win98/XP, Pentium III, 256MB RAM, GeForce 2 MX+).",
+      "launch-3":
+        "<strong>Day-One Support:</strong> Rapid deployment of hotfixes and performance updates based on live player feedback.",
+      "launch-4":
+        "<strong>Hardware Guidance:</strong> Official recommendations to use GeForce cards and avoid incompatible GPUs like TNT, Intel, Rage, or Matrox.",
+
+      // === OTROS ===
       "menu-title": "Game Process",
       "play-btn": "Play",
-      "footer-text":
-        "© 2025 Rakion Development Guide | Educational Project by [Your Name]",
+      "footer-text": "© 2025 Rakion Development Guide | Educational Project",
       "language-toggle": "Español",
     },
   };
@@ -157,5 +207,6 @@ document.addEventListener("navbarLoaded", () => {
     });
 
     currentLang = lang;
+    toggleBtn.textContent = t[lang]["language-toggle"];
   });
 });
